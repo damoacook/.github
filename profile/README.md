@@ -42,30 +42,30 @@
 
 ## 빠른 링크
 - 🏠 **웹사이트**: https://damoacook.com  
-- 📦 **Frontend Repo**: <!-- 예: https://github.com/ORG_NAME/damoa-front -->  
-- 🔧 **Backend Repo**: <!-- 예: https://github.com/ORG_NAME/damoa-back -->  
-- 📄 **API Base**: https://damoacook.com/api/
+- 📦 **Frontend Repo**: <!-- https://github.com/ORG_NAME/damoa-front -->  
+- 🔧 **Backend Repo**: <!-- https://github.com/ORG_NAME/damoa-back -->  
+- 🧩 **API Base**: https://damoacook.com/api/
 
 ## 스크린샷
 > 이미지는 이 저장소의 `profile/assets/` 폴더에 두고, 아래 경로를 맞춰주세요.
 
 <p align="center">
-  <img src="./profile/assets/screen-home.png" alt="Home" width="800"><br/>
+  <img src="./profile/assets/screen-home.png" alt="홈 화면" width="800"><br/>
   <em>홈 — 모집중 강의/공지/갤러리</em>
 </p>
 
 <p align="center">
-  <img src="./profile/assets/screen-lectures.png" alt="Lectures" width="800"><br/>
+  <img src="./profile/assets/screen-lectures.png" alt="강의 목록/상세" width="800"><br/>
   <em>강의 목록/상세</em>
 </p>
 
 <p align="center">
-  <img src="./profile/assets/screen-inquiry.png" alt="Inquiry" width="800"><br/>
+  <img src="./profile/assets/screen-inquiry.png" alt="수강문의" width="800"><br/>
   <em>수강문의 폼</em>
 </p>
 
 <p align="center">
-  <img src="./profile/assets/screen-map.png" alt="Map" width="800"><br/>
+  <img src="./profile/assets/screen-map.png" alt="오시는 길 지도" width="800"><br/>
   <em>오시는 길 — Naver Maps</em>
 </p>
 
@@ -90,3 +90,6 @@ flowchart LR
   Render -->|SMTP| NaverMail[(SMTP)]
   Render -->|Media| NaverObjectStorage[(S3)]
   Render -->|OpenAPI| HRDNet[HRD-Net]
+```
+## 문의
+Maintainer: 고근우 (@gkw314)
