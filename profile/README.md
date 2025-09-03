@@ -1,4 +1,4 @@
-# 다모아요리학원 (Damoa Cook Academy) — Organization Profile
+# 다모아요리학원 (Damoa Cook Academy)
 
 <p align="center">
   <img src="./profile/assets/logo.png" alt="Damoa Cook Academy Logo" width="300" />
