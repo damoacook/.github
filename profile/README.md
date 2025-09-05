@@ -323,7 +323,7 @@
 
 ### 오시는 길 (Map)
 - **Naver Maps JS v3**로 위치 안내
-- (이미지) `![map](./docs/assets/map.png)`
+- ![map](./assets/학원위치안내.gif)
 
 ### 팝업배너 (Popup)
 - **Naver Maps JS v3**로 위치 안내
