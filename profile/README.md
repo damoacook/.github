@@ -1,95 +1,265 @@
-# 다모아요리학원 (Damoa Cook Academy)
+# 🍳 다모아요리학원 (Damoa Cook Academy)
 
 <p align="center">
-  <img src="./assets/다모아요리학원로고.jpg" alt="Damoa Cook Academy Logo" width="300" />
+  <!-- 로고/커버: 원한다면 아래 경로에 이미지 추가 후 src 교체 -->
+  <img src="./docs/assets/cover.png" alt="Damoa Cook Academy Cover" width="720">
 </p>
 
 <p align="center">
   <a href="https://damoacook.com"><img alt="Website" src="https://img.shields.io/badge/website-live-2ea44f"></a>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white">
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-build-646CFF?logo=vite&logoColor=white">
+  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss&logoColor=white">
   <img alt="Django" src="https://img.shields.io/badge/Django-5.x-092E20?logo=django&logoColor=white">
   <img alt="DRF" src="https://img.shields.io/badge/DRF-REST_API-red">
-  <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white">
-  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss&logoColor=white">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?logo=postgresql&logoColor=white">
-  <img alt="Vercel" src="https://img.shields.io/badge/Frontend-Vercel-000000?logo=vercel&logoColor=white">
   <img alt="Render" src="https://img.shields.io/badge/Backend-Render-46E3B7?logo=render&logoColor=white">
+  <img alt="Vercel" src="https://img.shields.io/badge/Frontend-Vercel-000000?logo=vercel&logoColor=white">
+  <img alt="NCP" src="https://img.shields.io/badge/Storage-Naver%20Object%20Storage-03C75A">
   <img alt="License" src="https://img.shields.io/badge/license-UNLICENSED-lightgrey">
 </p>
 
 <p align="center">
-  <!-- 방문자 카운터: url 파라미터를 조직 프로필 또는 웹사이트로 맞추세요 -->
+  <!-- 방문자 카운터: url 파라미터를 이 리포지토리 주소(인코딩)로 교체하세요 -->
   <a href="https://hits.seeyoufarm.com">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdamoacook.com&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="hits"/>
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=<REPO_URL_ENCODED>&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=repo%20visits&edge_flat=false" alt="hits"/>
   </a>
 </p>
 
-> 다모아요리학원은 학원 소개, 강의/자격증 정보, 수강문의 접수를 제공하는 공식 웹사이트입니다.
-
-- [프로젝트 개요](#프로젝트-개요)
-- [빠른 링크](#빠른-링크)
-- [스크린샷](#스크린샷)
-- [주요 기능](#주요-기능)
-- [기술 스택](#기술-스택)
-- [아키텍처](#아키텍처)
-- [문의](#문의)
+> 학원 소개/강의 안내/자격증 정보/공지·갤러리/수강문의 기능을 제공하는 **다모아요리학원 공식 웹사이트**입니다.  
+> HRD-Net(공공데이터) 연동, 네이버 지도/스토리지, 문의 이메일 전송 등 **실서비스 운영 기능**을 갖췄습니다.
 
 ---
 
-## 프로젝트 개요
-- **기간**: 2025.06 ~ 2025.08  
-- **특징**: HRD-Net 공공데이터 연동, Naver Object Storage(S3 호환), Naver Maps / SMTP, 무로그인 문의 접수
+## 🔗 배포 & 접근
 
-## 빠른 링크
-- 🏠 **웹사이트**: https://damoacook.com  
-- 📦 **Frontend Repo**: <!-- https://github.com/ORG_NAME/damoa-front -->  
-- 🔧 **Backend Repo**: <!-- https://github.com/ORG_NAME/damoa-back -->  
-- 🧩 **API Base**: https://damoacook.com/api/
+- **웹사이트**: https://damoacook.com  
+- **API Base**: https://damoacook.com/api/  
+- **관리자/테스트 계정**: 내부 운영용으로 비공개 (일반 사용자는 로그인 불필요)
 
-## 스크린샷
-> 이미지는 이 저장소의 `profile/assets/` 폴더에 두고, 아래 경로를 맞춰주세요.
+---
 
-<p align="center">
-  <img src="./profile/assets/screen-home.png" alt="홈 화면" width="800"><br/>
-  <em>홈 — 모집중 강의/공지/갤러리</em>
-</p>
+## 📜 목차
 
-<p align="center">
-  <img src="./profile/assets/screen-lectures.png" alt="강의 목록/상세" width="800"><br/>
-  <em>강의 목록/상세</em>
-</p>
+- [프로젝트 소개](#-프로젝트-소개)
+- [개발 환경](#-개발-환경)
+- [채택 기술 & 브랜치 전략](#-채택-기술--브랜치-전략)
+- [프로젝트 구조](#-프로젝트-구조)
+- [역할 분담(개인 프로젝트)](#-역할-분담개인-프로젝트)
+- [개발 기간 & 작업 관리](#-개발-기간--작업-관리)
+- [신경 쓴 부분](#-신경-쓴-부분)
+- [페이지별 기능](#-페이지별-기능)
+- [트러블 슈팅](#-트러블-슈팅)
+- [개선 목표 & 성능 최적화](#-개선-목표--성능-최적화)
+- [설치 & 실행(요약)](#-설치--실행요약)
+- [API 요약](#-api-요약)
+- [라이선스](#-라이선스)
 
-<p align="center">
-  <img src="./profile/assets/screen-inquiry.png" alt="수강문의" width="800"><br/>
-  <em>수강문의 폼</em>
-</p>
+---
 
-<p align="center">
-  <img src="./profile/assets/screen-map.png" alt="오시는 길 지도" width="800"><br/>
-  <em>오시는 길 — Naver Maps</em>
-</p>
+## 📘 프로젝트 소개
 
-## 주요 기능
-- 강의/자격증 정보 제공, HRD-Net 강의 연동
-- 수강문의 접수 → 이메일 알림
-- 공지/갤러리 콘텐츠
-- 네이버 지도(오시는 길), OG/Kakao 미리보기
+- **서비스명**: 다모아요리학원 홈페이지  
+- **목표**
+  - 학원 브랜드와 커리큘럼을 명확히 전달
+  - 수강생 유입을 위한 문의/상담 흐름 최적화
+  - HRD-Net·Q-Net 등 **공공데이터/외부 연동**으로 최신 정보 제공
+- **핵심 가치**
+  - 콘텐츠 관리 효율(Django Admin)
+  - 가벼운 프론트(React+Vite) / 빠른 배포(Vercel)
+  - 확장 가능한 미디어 관리(S3 호환 스토리지)
 
-## 기술 스택
-- **Frontend**: React(Vite), Tailwind, React Query, React Router  
-- **Backend**: Django + DRF, SimpleJWT, Gunicorn, WhiteNoise  
-- **Infra**: Vercel(프론트), Render(백엔드), PostgreSQL, Naver Object Storage(S3)  
-- **Integrations**: HRD-Net, Naver SMTP, Naver Maps
+---
 
-## 아키텍처
-```mermaid
-flowchart LR
-  User -->|HTTPS| Vercel[Frontend]
-  Vercel -->|/api rewrite| Render[Backend: Gunicorn]
-  Render -->|ORM| PostgreSQL[(DB)]
-  Render -->|SMTP| NaverMail[(SMTP)]
-  Render -->|Media| NaverObjectStorage[(S3)]
-  Render -->|OpenAPI| HRDNet[HRD-Net]
+## 🛠 개발 환경
+
+- **Frontend**: React 18, Vite, Tailwind CSS, React Router, React Query  
+- **Backend**: Django 5.x, Django REST Framework, SimpleJWT(관리자 인증)  
+- **Infra**: Vercel(프론트), Render(백엔드), PostgreSQL, **Naver Object Storage(S3)**  
+- **지도/메일**: Naver Maps JS v3, Naver SMTP  
+- **버전/이슈관리**: GitHub, Projects, Issues  
+- **디자인**: Figma  
+- **컨벤션**: ESLint(Airbnb) + Prettier 자동정렬, 커밋 규칙(`feat:`, `fix:`, `docs:` …)
+
+---
+
+## ⚙ 채택 기술 & 브랜치 전략
+
+### React + Vite + Tailwind
+- 컴포넌트화로 **재사용성/유지보수성** 향상 (강의 카드, 배너, 문의 폼 등 공통화)
+- Vite 기반 번들링으로 **개발 속도**와 **빌드 성능** 개선
+- Tailwind 유틸리티 클래스 → **일관된 디자인 토큰** 운영
+
+### Django + DRF
+- RESTful API로 프론트/백 분리
+- Django Admin으로 콘텐츠(강의/공지/갤러리/팝업) **운영 효율 극대화**
+
+### 외부 연동
+- **HRD-Net**: 강의 데이터/과정 안내
+- **Naver SMTP**: 문의 접수 시 이메일 알림
+- **Naver Maps**: 오시는 길/지점 안내
+- **Naver Object Storage**: 미디어 업로드/호스팅
+
+### 브랜치 전략 (개인 운영용 간소화 Git-flow)
+- `main`: 배포용(릴리즈)
+- `develop`: 통합 개발 브랜치
+- `feat/<scope>`: 기능 단위 작업 → PR → `develop` 병합 후 삭제
+- 필요 시 `hotfix/*`로 긴급 수정
+
+---
+
+## 🧱 프로젝트 구조
+
+.
+├── README.md
+├── docs/
+│ └── assets/ # 스크린샷/애니메이션(수동 업로드)
+│ ├── cover.png
+│ ├── home.png
+│ ├── lectures.png
+│ ├── inquiry.png
+│ ├── map.png
+│ └── gifs/
+│ └── inquiry-flow.gif
+├── frontend/ # React + Vite + Tailwind
+│ ├── src/
+│ │ ├── pages/ # Home, Lectures, Certificates, News, Gallery, Inquiry, Map ...
+│ │ ├── components/ # 카드/배너/폼/탭 등 공통
+│ │ ├── api/ # fetcher, hooks
+│ │ └── styles/
+│ └── index.html
+└── backend/ # Django + DRF
+├── apps/
+│ ├── lectures/
+│ ├── certificates/
+│ ├── inquiries/
+│ ├── news/
+│ ├── gallery/
+│ └── popup/
+├── config/ # settings/urls/wsgi
+└── envs/ # (.env.local/.env.prod 예시 위치; 실제 값은 인프라 주입)
+
+markdown
+코드 복사
+
+---
+
+## 👤 역할 분담(개인 프로젝트)
+
+- **기획 · 디자인 · 프론트엔드 · 백엔드 · 배포 · 모니터링** 전 과정 **단독 수행**
+- 주요 공수
+  - 정보구조(IA) & 화면흐름 설계, OG/Kakao 미리보기, 접근성 고려
+  - 강의/공지/갤러리/팝업 도메인 모델링 & Admin 구성
+  - 수강문의 API/이메일 연동(실패 로깅·재발송 플로우)
+  - CORS/CSRF/보안 헤더 설정, 스토리지/정적파일 파이프라인
+
+---
+
+## 🗓 개발 기간 & 작업 관리
+
+- **전체**: 2025-06 ~ 2025-08  
+- 칸반: GitHub Projects + Issues  
+- 의사결정/회고: README/Issues에 기록
+
+---
+
+## ✨ 신경 쓴 부분
+
+- **문의 전송 안정성**: DB 저장 후 메일 발송 실패 시 로깅(`fail_silently=False`), 재발송 관리 훅
+- **성능**: 이미지 최적화(WebP/치수 명시), Lazy Loading, 캐시 헤더, Vercel 에지 캐시
+- **운영 UX**: 팝업 배너(오늘 하루 보지 않기), 브레드크럼, 반응형 레이아웃
+- **보안**: 비밀키/토큰 환경변수 운영, 도메인 기반 CORS/CSRF 화이트리스트
+
+---
+
+## 📱 페이지별 기능
+
+> 이미지/GIF는 **비워둔 자리**에 직접 올려주세요. 권장 경로: `./docs/assets/` & `./docs/assets/gifs/`
+
+### 홈 (Home)
+- 모집중 강의 슬라이드, 공지/갤러리 하이라이트
+- (이미지) `![home](./docs/assets/home.png)`
+
+### 강의 (Lectures)
+- 내부 강의 목록/상세, **HRD-Net 연동 강의** 정보 제공
+- (이미지) `![lectures](./docs/assets/lectures.png)`
+
+### 자격증 (Certificates)
+- 종목 소개 + (선택) 시험 일정 안내 링크/문서
+- (이미지) `![certificates](./docs/assets/certificates.png)`
+
+### 공지/갤러리 (News/Gallery)
+- 목록/상세, 이미지 S3 저장/서빙
+- (이미지) `![news](./docs/assets/news.png)` / `![gallery](./docs/assets/gallery.png)`
+
+### 수강문의 (Inquiry)
+- 무로그인 폼 제출 → **DB 저장 + 이메일 알림**
+- (GIF) `![inquiry-flow](./docs/assets/gifs/inquiry-flow.gif)` / (이미지) `![inquiry](./docs/assets/inquiry.png)`
+
+### 오시는 길 (Map)
+- **Naver Maps JS v3**로 위치 안내
+- (이미지) `![map](./docs/assets/map.png)`
+
+---
+
+## 🧩 트러블 슈팅
+
+### 1) SMTP 메일 미수신 이슈
+- **현상**: 201(Created) 응답이나 메일 미수신
+- **원인**: `EMAIL_USE_TLS` 공백/따옴표 문제, DMARC/From 미스매치
+- **해결**: `fail_silently=False` 로깅, 발신 도메인/포트/TLS 점검, From/Reply-To 분리
+
+### 2) CORS/CSRF 프리뷰 도메인
+- **현상**: Vercel 프리뷰에서 CORS/CSRF 차단
+- **해결**: `CORS_ALLOWED_ORIGIN_REGEXES`에 `^https://.*\.vercel\.app$` 추가, CSRF Trusted Origins 반영
+
+---
+
+## 🚀 개선 목표 & 성능 최적화
+
+### Lighthouse
+- Best Practices/SEO 90~100 유지
+- CLS/LCP 개선을 위한 이미지 치수/지연로딩/캐시 정책 강화
+
+### 이미지/정적 자원
+- WebP/AVIF 변환(가능 시), 썸네일 제작
+- WhiteNoise 해시 서빙 + CDN 캐시
+
+### 데이터/운영
+- 관리자 전용 프론트(운영 대시보드)
+- HRD-Net 데이터 동기화 자동화 & 백업
+
+---
+
+## 🧪 설치 & 실행(요약)
+
+> 실제 비밀값은 인프라 환경변수로 주입합니다(README에 값 공개 없음).
+
+### Frontend (로컬)
+```bash
+cd frontend
+npm i
+npm run dev  # http://localhost:5173
+Backend (로컬)
+bash
+코드 복사
+cd backend
+# Poetry 또는 pip 중 택1
+poetry install && poetry run python manage.py migrate && poetry run python manage.py runserver 0.0.0.0:8000
+# 또는
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate && python manage.py runserver 0.0.0.0:8000
 ```
-## 문의
-Maintainer: 고근우 (@gkw314)
+🔎 API 요약
+GET /api/lectures/ — 내부 강의 목록
+
+GET /api/lectures/{id}/ — 내부 강의 상세
+
+GET /api/hrd-lectures/ — HRD-Net 연동 강의 목록
+
+GET /api/hrd-lectures/{id}/ — HRD-Net 연동 강의 상세
+
+POST /api/inquiries/ — 수강문의 접수(메일 알림)
+
+GET /api/news/, GET /api/gallery/ — 콘텐츠 목록/상세
