@@ -305,13 +305,17 @@
 - 모집중 강의 슬라이드, 공지/갤러리 하이라이트
 - ![home](./assets/메인화면.gif)
 
+### 학원소개 (abouut)
+- 학원 인사말, 연혁, 비전, 협력업체, 오시는길 안내
+- ![Lectures](./assets/학원소개.gif)
+
 ### 강의 (Lectures)
 - 내부 강의 목록/상세, **HRD-Net 연동 강의** 정보 제공
 - ![Lectures](./assets/모집과정.gif)
 
 ### 공지/갤러리 (News/Gallery)
 - 목록/상세, 이미지 S3 저장/서빙
-- ![news](./assets/공지사항,갤러리.gif)
+- ![news](./assets/공지사항.gif)
 
 ### 수강문의 (Inquiry)
 - 무로그인 폼 제출 → **이메일 알림**
