@@ -2,7 +2,7 @@
 
 <p align="center">
   <!-- 로고/커버: 원한다면 아래 경로에 이미지 추가 후 src 교체 -->
-  <img src="./docs/assets/cover.png" alt="Damoa Cook Academy Cover" width="720">
+  <img src="./assets/damoacook.png" alt="Damoa Cook Academy Cover" width="720">
 </p>
 
 <p align="center">
@@ -26,15 +26,14 @@
   </a>
 </p>
 
-> 학원 소개/강의 안내/자격증 정보/공지·갤러리/수강문의 기능을 제공하는 **다모아요리학원 공식 웹사이트**입니다.  
-> HRD-Net(공공데이터) 연동, 네이버 지도/스토리지, 문의 이메일 전송 등 **실서비스 운영 기능**을 갖췄습니다.
+- 학원 소개/강의 안내/공지·갤러리/수강문의 기능을 제공하는 **다모아요리학원 공식 웹사이트**입니다.  
+- HRD-Net(공공데이터) 연동, 네이버 지도/스토리지, 문의 이메일 전송 등 **실서비스 운영 기능**을 갖췄습니다.
 
 ---
 
 ## 🔗 배포 & 접근
 
 - **웹사이트**: https://damoacook.com  
-- **API Base**: https://damoacook.com/api/  
 - **관리자/테스트 계정**: 내부 운영용으로 비공개 (일반 사용자는 로그인 불필요)
 
 ---
@@ -53,7 +52,6 @@
 - [개선 목표 & 성능 최적화](#-개선-목표--성능-최적화)
 - [설치 & 실행(요약)](#-설치--실행요약)
 - [API 요약](#-api-요약)
-- [라이선스](#-라이선스)
 
 ---
 
@@ -77,9 +75,7 @@
 - **Backend**: Django 5.x, Django REST Framework, SimpleJWT(관리자 인증)  
 - **Infra**: Vercel(프론트), Render(백엔드), PostgreSQL, **Naver Object Storage(S3)**  
 - **지도/메일**: Naver Maps JS v3, Naver SMTP  
-- **버전/이슈관리**: GitHub, Projects, Issues  
-- **디자인**: Figma  
-- **컨벤션**: ESLint(Airbnb) + Prettier 자동정렬, 커밋 규칙(`feat:`, `fix:`, `docs:` …)
+- **버전/이슈관리**: GitHub, Projects, Issues
 
 ---
 
@@ -109,42 +105,175 @@
 ---
 
 ## 🧱 프로젝트 구조
+# Front
+```
+📦src
+ ┣ 📂api
+ ┃ ┣ 📜axios.js
+ ┃ ┣ 📜gallery.js
+ ┃ ┣ 📜home.js
+ ┃ ┣ 📜hrdLectures.js
+ ┃ ┣ 📜inquiry.js
+ ┃ ┣ 📜lectures.js
+ ┃ ┗ 📜news.js
+ ┣ 📂assets
+ ┃ ┗ 📜react.svg
+ ┣ 📂components
+ ┃ ┣ 📜Breadcrumbs.jsx
+ ┃ ┣ 📜CommunityLayout.jsx
+ ┃ ┣ 📜Footer.jsx
+ ┃ ┣ 📜GallerySection.jsx
+ ┃ ┣ 📜Header.jsx
+ ┃ ┣ 📜ImagePicker.jsx
+ ┃ ┣ 📜LectureCard.jsx
+ ┃ ┣ 📜MainBannerSlider.jsx
+ ┃ ┣ 📜MainLayout.jsx
+ ┃ ┣ 📜MainMenuBoxes.jsx
+ ┃ ┣ 📜MapWithPreview.jsx
+ ┃ ┣ 📜MenuBox.jsx
+ ┃ ┣ 📜NaverMap.jsx
+ ┃ ┣ 📜NewsSection.jsx
+ ┃ ┣ 📜PartnersSlider.jsx
+ ┃ ┣ 📜PopupBanner.jsx
+ ┃ ┗ 📜RecruitSection.jsx
+ ┣ 📂contexts
+ ┃ ┗ 📜AuthContext.jsx
+ ┣ 📂data
+ ┃ ┣ 📜certificates.js
+ ┃ ┗ 📜partners.js
+ ┣ 📂lib
+ ┃ ┗ 📜naverMapLoader.js
+ ┣ 📂pages
+ ┃ ┣ 📂about
+ ┃ ┃ ┣ 📜AboutLayout.jsx
+ ┃ ┃ ┣ 📜FacilitiesPage.jsx
+ ┃ ┃ ┣ 📜GreetingPage.jsx
+ ┃ ┃ ┣ 📜HistoryPage.jsx
+ ┃ ┃ ┣ 📜LocationSection.jsx
+ ┃ ┃ ┣ 📜PartnersPage.jsx
+ ┃ ┃ ┗ 📜VisionPage.jsx
+ ┃ ┣ 📂certificates
+ ┃ ┃ ┗ 📜CertificateDetailPage.jsx
+ ┃ ┣ 📂community
+ ┃ ┃ ┣ 📜GalleryDetailPage.jsx
+ ┃ ┃ ┣ 📜GalleryEditorPage.jsx
+ ┃ ┃ ┣ 📜GalleryPage.jsx
+ ┃ ┃ ┣ 📜NewsDetailPage.jsx
+ ┃ ┃ ┣ 📜NewsEditorPage.jsx
+ ┃ ┃ ┗ 📜NewsPage.jsx
+ ┃ ┣ 📂inquiries
+ ┃ ┃ ┗ 📜InquiryPage.jsx
+ ┃ ┣ 📂login
+ ┃ ┃ ┗ 📜LoginPage.jsx
+ ┃ ┣ 📂popup
+ ┃ ┃ ┣ 📜PopupManageForm.jsx
+ ┃ ┃ ┗ 📜PopupManageList.jsx
+ ┃ ┣ 📜Contact.jsx
+ ┃ ┣ 📜Home.jsx
+ ┃ ┣ 📜HrdLectureDetailPage.jsx
+ ┃ ┣ 📜LectureDetailPage.jsx
+ ┃ ┣ 📜LectureEditorPage.jsx
+ ┃ ┣ 📜LecturesPage.jsx
+ ┃ ┗ 📜LegalPrivacy.jsx
+ ┣ 📂routes
+ ┃ ┗ 📜RequireAuth.jsx
+ ┣ 📂sections
+ ┃ ┣ 📜ContactMapCta.jsx
+ ┃ ┣ 📜FacilityShowcaseHome.jsx
+ ┃ ┣ 📜InquiryCtaSection.jsx
+ ┃ ┣ 📜PartnersSection.jsx
+ ┃ ┗ 📜TrustStrip.jsx
+ ┣ 📜App.css
+ ┣ 📜App.jsx
+ ┣ 📜index.css
+ ┗ 📜main.jsx
+```
+# Back
+```
+📦apps
+ ┣ 📂about
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┗ 📜views.py
+ ┣ 📂accounts
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜permissions.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┣ 📂certificates
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┗ 📜views.py
+ ┣ 📂gallery
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┗ 📜views.py
+ ┣ 📂inquiries
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┣ 📂lectures
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┃ ┣ 📜views_combined.py
+ ┃ ┗ 📜views_hrd.py
+ ┣ 📂news
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┗ 📜views.py
+ ┣ 📂popup
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜serializers.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┗  📜views.py
+ ┗ 📜__init__.py
 
-.
-├── README.md
-├── docs/
-│ └── assets/ # 스크린샷/애니메이션(수동 업로드)
-│ ├── cover.png
-│ ├── home.png
-│ ├── lectures.png
-│ ├── inquiry.png
-│ ├── map.png
-│ └── gifs/
-│ └── inquiry-flow.gif
-├── frontend/ # React + Vite + Tailwind
-│ ├── src/
-│ │ ├── pages/ # Home, Lectures, Certificates, News, Gallery, Inquiry, Map ...
-│ │ ├── components/ # 카드/배너/폼/탭 등 공통
-│ │ ├── api/ # fetcher, hooks
-│ │ └── styles/
-│ └── index.html
-└── backend/ # Django + DRF
-├── apps/
-│ ├── lectures/
-│ ├── certificates/
-│ ├── inquiries/
-│ ├── news/
-│ ├── gallery/
-│ └── popup/
-├── config/ # settings/urls/wsgi
-└── envs/ # (.env.local/.env.prod 예시 위치; 실제 값은 인프라 주입)
 
-markdown
-코드 복사
+📦config
+ ┣ 📂__pycache__
+ ┃ ┣ 📜settings.cpython-312.pyc
+ ┃ ┣ 📜urls.cpython-312.pyc
+ ┃ ┣ 📜wsgi.cpython-312.pyc
+ ┃ ┗ 📜__init__.cpython-312.pyc
+ ┣ 📜asgi.py
+ ┣ 📜settings.py
+ ┣ 📜urls.py
+ ┗ 📜wsgi.py
+```
 
----
-
-## 👤 역할 분담(개인 프로젝트)
+## 👤 역할(개인 프로젝트)
 
 - **기획 · 디자인 · 프론트엔드 · 백엔드 · 배포 · 모니터링** 전 과정 **단독 수행**
 - 주요 공수
@@ -155,50 +284,46 @@ markdown
 
 ---
 
-## 🗓 개발 기간 & 작업 관리
+## 🗓 개발 기간
 
-- **전체**: 2025-06 ~ 2025-08  
-- 칸반: GitHub Projects + Issues  
-- 의사결정/회고: README/Issues에 기록
+- **전체**: 2025-07 ~ 2025-09  
 
 ---
 
 ## ✨ 신경 쓴 부분
 
-- **문의 전송 안정성**: DB 저장 후 메일 발송 실패 시 로깅(`fail_silently=False`), 재발송 관리 훅
-- **성능**: 이미지 최적화(WebP/치수 명시), Lazy Loading, 캐시 헤더, Vercel 에지 캐시
-- **운영 UX**: 팝업 배너(오늘 하루 보지 않기), 브레드크럼, 반응형 레이아웃
+- **문의 전송 안정성**: DB 저장 후 메일 발송 실패 시 로깅, 재발송 관리 훅
+- **성능**: 이미지 최적화(WebP/치수 명시), 캐시 헤더, Vercel 에지 캐시
+- **운영 UX**: 팝업 배너(오늘 하루 보지 않기), 반응형 레이아웃, HRD-Net 공공데이터 연결
 - **보안**: 비밀키/토큰 환경변수 운영, 도메인 기반 CORS/CSRF 화이트리스트
 
 ---
 
 ## 📱 페이지별 기능
 
-> 이미지/GIF는 **비워둔 자리**에 직접 올려주세요. 권장 경로: `./docs/assets/` & `./docs/assets/gifs/`
-
 ### 홈 (Home)
 - 모집중 강의 슬라이드, 공지/갤러리 하이라이트
-- (이미지) `![home](./docs/assets/home.png)`
+- ![home](./assets/메인화면.gif)
 
 ### 강의 (Lectures)
 - 내부 강의 목록/상세, **HRD-Net 연동 강의** 정보 제공
-- (이미지) `![lectures](./docs/assets/lectures.png)`
-
-### 자격증 (Certificates)
-- 종목 소개 + (선택) 시험 일정 안내 링크/문서
-- (이미지) `![certificates](./docs/assets/certificates.png)`
+- ![Lectures](./assets/모집과정.gif)
 
 ### 공지/갤러리 (News/Gallery)
 - 목록/상세, 이미지 S3 저장/서빙
-- (이미지) `![news](./docs/assets/news.png)` / `![gallery](./docs/assets/gallery.png)`
+- (이미지) `![news](./docs/assets/news.gif)` / `![gallery](./docs/assets/gallery.png)`
 
 ### 수강문의 (Inquiry)
-- 무로그인 폼 제출 → **DB 저장 + 이메일 알림**
-- (GIF) `![inquiry-flow](./docs/assets/gifs/inquiry-flow.gif)` / (이미지) `![inquiry](./docs/assets/inquiry.png)`
+- 무로그인 폼 제출 → **이메일 알림**
+- ![Inquiry](./assets/수강문의.gif)
 
 ### 오시는 길 (Map)
 - **Naver Maps JS v3**로 위치 안내
 - (이미지) `![map](./docs/assets/map.png)`
+
+### 팝업배너 (Popup)
+- **Naver Maps JS v3**로 위치 안내
+- ![Popup](./assets/팝업배너.gif)
 
 ---
 
@@ -242,7 +367,8 @@ npm i
 npm run dev  # http://localhost:5173
 Backend (로컬)
 bash
-코드 복사
+
+
 cd backend
 # Poetry 또는 pip 중 택1
 poetry install && poetry run python manage.py migrate && poetry run python manage.py runserver 0.0.0.0:8000
@@ -251,7 +377,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate && python manage.py runserver 0.0.0.0:8000
 ```
-🔎 API 요약
+## 🔎 API 요약
 GET /api/lectures/ — 내부 강의 목록
 
 GET /api/lectures/{id}/ — 내부 강의 상세
