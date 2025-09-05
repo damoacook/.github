@@ -311,7 +311,7 @@
 
 ### 공지/갤러리 (News/Gallery)
 - 목록/상세, 이미지 S3 저장/서빙
-- (이미지) `![news](./docs/assets/news.gif)` / `![gallery](./docs/assets/gallery.png)`
+- ![news](./assets/공지사항,갤러리.gif)
 
 ### 수강문의 (Inquiry)
 - 무로그인 폼 제출 → **이메일 알림**
