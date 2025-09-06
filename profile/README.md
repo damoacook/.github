@@ -15,17 +15,9 @@
   <img alt="Render" src="https://img.shields.io/badge/Render-backend-46E3B7?style=flat">
   <img alt="Vercel" src="https://img.shields.io/badge/Vercel-frontend-000000?style=flat">
   <img alt="Naver Object Storage" src="https://img.shields.io/badge/Naver_Object_Storage-S3-03C75A?style=flat">
-  <img alt="License" src="https://img.shields.io/badge/License-UNLICENSED-lightgrey?style=flat">
 </p>
 
-<p align="center">
-  <a href="https://hits.seeyoufarm.com">
-    <img
-      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdamoacook&count_bg=%2379C83D&title_bg=%23555555&title=org%20visits&edge_flat=false"
-      alt="org visits"
-    />
-  </a>
-</p>
+
 
 - 학원 소개/강의 안내/공지·갤러리/수강문의 기능을 제공하는 **다모아요리학원 공식 웹사이트**입니다.  
 - HRD-Net(공공데이터) 연동, 네이버 지도/스토리지, 문의 이메일 전송 등 **실서비스 운영 기능**을 갖췄습니다.
