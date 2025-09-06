@@ -19,9 +19,11 @@
 </p>
 
 <p align="center">
-  <!-- 방문자 카운터: url 파라미터를 이 리포지토리 주소(인코딩)로 교체 -->
   <a href="https://hits.seeyoufarm.com">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=<REPO_URL_ENCODED>&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=repo%20visits&edge_flat=false" alt="hits"/>
+    <img
+      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdamoacook&count_bg=%2379C83D&title_bg=%23555555&title=org%20visits&edge_flat=false"
+      alt="org visits"
+    />
   </a>
 </p>
 
