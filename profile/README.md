@@ -1,26 +1,25 @@
 # 🍳 다모아요리학원 (Damoa Cook Academy)
 
 <p align="center">
-  <!-- 로고/커버: 원한다면 아래 경로에 이미지 추가 후 src 교체 -->
   <img src="./assets/damoacook.png" alt="Damoa Cook Academy Cover" width="720">
 </p>
 
 <p align="center">
-  <a href="https://damoacook.com"><img alt="Website" src="https://img.shields.io/badge/website-live-2ea44f"></a>
-  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white">
-  <img alt="Vite" src="https://img.shields.io/badge/Vite-build-646CFF?logo=vite&logoColor=white">
-  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss&logoColor=white">
-  <img alt="Django" src="https://img.shields.io/badge/Django-5.x-092E20?logo=django&logoColor=white">
-  <img alt="DRF" src="https://img.shields.io/badge/DRF-REST_API-red">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?logo=postgresql&logoColor=white">
-  <img alt="Render" src="https://img.shields.io/badge/Backend-Render-46E3B7?logo=render&logoColor=white">
-  <img alt="Vercel" src="https://img.shields.io/badge/Frontend-Vercel-000000?logo=vercel&logoColor=white">
-  <img alt="NCP" src="https://img.shields.io/badge/Storage-Naver%20Object%20Storage-03C75A">
-  <img alt="License" src="https://img.shields.io/badge/license-UNLICENSED-lightgrey">
+  <a href="https://damoacook.com"><img alt="Website" src="https://img.shields.io/badge/Website-live-2ea44f?style=flat"></a>
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?style=flat">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-4-646CFF?style=flat">
+  <img alt="TailwindCSS" src="https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=flat">
+  <img alt="Django" src="https://img.shields.io/badge/Django-5-092E20?style=flat">
+  <img alt="DRF" src="https://img.shields.io/badge/DRF-REST_API-red?style=flat">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?style=flat">
+  <img alt="Render" src="https://img.shields.io/badge/Render-backend-46E3B7?style=flat">
+  <img alt="Vercel" src="https://img.shields.io/badge/Vercel-frontend-000000?style=flat">
+  <img alt="Naver Object Storage" src="https://img.shields.io/badge/Naver_Object_Storage-S3-03C75A?style=flat">
+  <img alt="License" src="https://img.shields.io/badge/License-UNLICENSED-lightgrey?style=flat">
 </p>
 
 <p align="center">
-  <!-- 방문자 카운터: url 파라미터를 이 리포지토리 주소(인코딩)로 교체하세요 -->
+  <!-- 방문자 카운터: url 파라미터를 이 리포지토리 주소(인코딩)로 교체 -->
   <a href="https://hits.seeyoufarm.com">
     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=<REPO_URL_ENCODED>&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=repo%20visits&edge_flat=false" alt="hits"/>
   </a>
@@ -32,272 +31,107 @@
 ---
 
 ## 🔗 배포 & 접근
-
 - **웹사이트**: https://damoacook.com  
+- **API Base**: https://damoacook.com/api/  
 - **관리자/테스트 계정**: 내부 운영용으로 비공개 (일반 사용자는 로그인 불필요)
 
 ---
 
 ## 📜 목차
-
 - [프로젝트 소개](#-프로젝트-소개)
 - [개발 환경](#-개발-환경)
-- [채택 기술 & 브랜치 전략](#-채택-기술--브랜치-전략)
+- [채택 기술 — 왜 이렇게 골랐나](#-채택-기술--왜-이렇게-골랐나)
 - [프로젝트 구조](#-프로젝트-구조)
-- [역할 분담(개인 프로젝트)](#-역할-분담개인-프로젝트)
-- [개발 기간 & 작업 관리](#-개발-기간--작업-관리)
+- [역할(개인 프로젝트)](#-역할개인-프로젝트)
+- [개발 기간](#-개발-기간)
 - [신경 쓴 부분](#-신경-쓴-부분)
 - [페이지별 기능](#-페이지별-기능)
-- [트러블 슈팅](#-트러블-슈팅)
+- [트러블 슈팅 (케이스 스터디)](#-트러블-슈팅-케이스-스터디)
 - [개선 목표 & 성능 최적화](#-개선-목표--성능-최적화)
-- [설치 & 실행(요약)](#-설치--실행요약)
+- [설치 & 실행](#-설치--실행)
 - [API 요약](#-api-요약)
+- [라이선스](#-라이선스)
 
 ---
 
 ## 📘 프로젝트 소개
-
 - **서비스명**: 다모아요리학원 홈페이지  
 - **목표**
-  - 학원 브랜드와 커리큘럼을 명확히 전달
-  - 수강생 유입을 위한 문의/상담 흐름 최적화
-  - HRD-Net·Q-Net 등 **공공데이터/외부 연동**으로 최신 정보 제공
+  - 학원 브랜드/커리큘럼 명확 전달, 수강 문의 흐름 최적화
+  - HRD-Net 등 **외부 데이터 연동**으로 최신 정보 제공
 - **핵심 가치**
   - 콘텐츠 관리 효율(Django Admin)
   - 가벼운 프론트(React+Vite) / 빠른 배포(Vercel)
-  - 확장 가능한 미디어 관리(S3 호환 스토리지)
+  - 확장 가능한 미디어 관리(Naver Object Storage)
 
 ---
 
 ## 🛠 개발 환경
-
 - **Frontend**: React 18, Vite, Tailwind CSS, React Router, React Query  
-- **Backend**: Django 5.x, Django REST Framework, SimpleJWT(관리자 인증)  
+- **Backend**: Django 5, Django REST Framework, SimpleJWT(관리자 인증)  
 - **Infra**: Vercel(프론트), Render(백엔드), PostgreSQL, **Naver Object Storage(S3)**  
 - **지도/메일**: Naver Maps JS v3, Naver SMTP  
-- **버전/이슈관리**: GitHub, Projects, Issues
+- **이슈/보드**: GitHub Issues/Projects
 
 ---
 
-## ⚙ 채택 기술 & 브랜치 전략
-
+## ⚙ 채택 기술 — 왜 이렇게 골랐나
 ### React + Vite + Tailwind
-- 컴포넌트화로 **재사용성/유지보수성** 향상 (강의 카드, 배너, 문의 폼 등 공통화)
-- Vite 기반 번들링으로 **개발 속도**와 **빌드 성능** 개선
-- Tailwind 유틸리티 클래스 → **일관된 디자인 토큰** 운영
+- **Vite**: dev 서버 기동/핫리로드 체감 속도 ↑, 빌드 구성 단순.
+- **Tailwind**: 유틸리티 클래스 기반으로 디자인 토큰 공유가 쉬움 → **일관성** 확보, CSS 전역 충돌 리스크 ↓.
+- **React Query**: HRD-Net/뉴스/갤러리 등 **읽기 중심 API**에 캐싱/리트라이/에러 경계 제공 → 사용자 체감 속도 ↑.
 
 ### Django + DRF
-- RESTful API로 프론트/백 분리
-- Django Admin으로 콘텐츠(강의/공지/갤러리/팝업) **운영 효율 극대화**
+- **Admin**이 강력: 강의/공지/갤러리/팝업을 비개발자도 즉시 운영 가능.
+- **DRF**의 시리얼라이저/권한/페이지네이션이 규격화돼 있어 유지보수 비용 ↓.
+- **SimpleJWT**: 공개 API와 관리자용 API를 분리해 **최소 권한 원칙** 적용.
 
-### 외부 연동
-- **HRD-Net**: 강의 데이터/과정 안내
-- **Naver SMTP**: 문의 접수 시 이메일 알림
-- **Naver Maps**: 오시는 길/지점 안내
-- **Naver Object Storage**: 미디어 업로드/호스팅
-
-### 브랜치 전략 (개인 운영용 간소화 Git-flow)
-- `main`: 배포용(릴리즈)
-- `develop`: 통합 개발 브랜치
-- `feat/<scope>`: 기능 단위 작업 → PR → `develop` 병합 후 삭제
-- 필요 시 `hotfix/*`로 긴급 수정
-
+### Vercel + Render + Naver Object Storage
+- **FE/BE 분리 배포**: 장애 범위 분리, 롤백/프리뷰 편리.
+- **Object Storage(S3)**: Render는 로컬 디스크 휘발성 → **이미지 영속성/서빙 성능**을 위해 외부 스토리지 채택.
 ---
 
 ## 🧱 프로젝트 구조
 # Front
 ```
-📦src
- ┣ 📂api
- ┃ ┣ 📜axios.js
- ┃ ┣ 📜gallery.js
- ┃ ┣ 📜home.js
- ┃ ┣ 📜hrdLectures.js
- ┃ ┣ 📜inquiry.js
- ┃ ┣ 📜lectures.js
- ┃ ┗ 📜news.js
- ┣ 📂assets
- ┃ ┗ 📜react.svg
- ┣ 📂components
- ┃ ┣ 📜Breadcrumbs.jsx
- ┃ ┣ 📜CommunityLayout.jsx
- ┃ ┣ 📜Footer.jsx
- ┃ ┣ 📜GallerySection.jsx
- ┃ ┣ 📜Header.jsx
- ┃ ┣ 📜ImagePicker.jsx
- ┃ ┣ 📜LectureCard.jsx
- ┃ ┣ 📜MainBannerSlider.jsx
- ┃ ┣ 📜MainLayout.jsx
- ┃ ┣ 📜MainMenuBoxes.jsx
- ┃ ┣ 📜MapWithPreview.jsx
- ┃ ┣ 📜MenuBox.jsx
- ┃ ┣ 📜NaverMap.jsx
- ┃ ┣ 📜NewsSection.jsx
- ┃ ┣ 📜PartnersSlider.jsx
- ┃ ┣ 📜PopupBanner.jsx
- ┃ ┗ 📜RecruitSection.jsx
- ┣ 📂contexts
- ┃ ┗ 📜AuthContext.jsx
- ┣ 📂data
- ┃ ┣ 📜certificates.js
- ┃ ┗ 📜partners.js
- ┣ 📂lib
- ┃ ┗ 📜naverMapLoader.js
- ┣ 📂pages
- ┃ ┣ 📂about
- ┃ ┃ ┣ 📜AboutLayout.jsx
- ┃ ┃ ┣ 📜FacilitiesPage.jsx
- ┃ ┃ ┣ 📜GreetingPage.jsx
- ┃ ┃ ┣ 📜HistoryPage.jsx
- ┃ ┃ ┣ 📜LocationSection.jsx
- ┃ ┃ ┣ 📜PartnersPage.jsx
- ┃ ┃ ┗ 📜VisionPage.jsx
- ┃ ┣ 📂certificates
- ┃ ┃ ┗ 📜CertificateDetailPage.jsx
- ┃ ┣ 📂community
- ┃ ┃ ┣ 📜GalleryDetailPage.jsx
- ┃ ┃ ┣ 📜GalleryEditorPage.jsx
- ┃ ┃ ┣ 📜GalleryPage.jsx
- ┃ ┃ ┣ 📜NewsDetailPage.jsx
- ┃ ┃ ┣ 📜NewsEditorPage.jsx
- ┃ ┃ ┗ 📜NewsPage.jsx
- ┃ ┣ 📂inquiries
- ┃ ┃ ┗ 📜InquiryPage.jsx
- ┃ ┣ 📂login
- ┃ ┃ ┗ 📜LoginPage.jsx
- ┃ ┣ 📂popup
- ┃ ┃ ┣ 📜PopupManageForm.jsx
- ┃ ┃ ┗ 📜PopupManageList.jsx
- ┃ ┣ 📜Contact.jsx
- ┃ ┣ 📜Home.jsx
- ┃ ┣ 📜HrdLectureDetailPage.jsx
- ┃ ┣ 📜LectureDetailPage.jsx
- ┃ ┣ 📜LectureEditorPage.jsx
- ┃ ┣ 📜LecturesPage.jsx
- ┃ ┗ 📜LegalPrivacy.jsx
- ┣ 📂routes
- ┃ ┗ 📜RequireAuth.jsx
- ┣ 📂sections
- ┃ ┣ 📜ContactMapCta.jsx
- ┃ ┣ 📜FacilityShowcaseHome.jsx
- ┃ ┣ 📜InquiryCtaSection.jsx
- ┃ ┣ 📜PartnersSection.jsx
- ┃ ┗ 📜TrustStrip.jsx
- ┣ 📜App.css
- ┣ 📜App.jsx
- ┣ 📜index.css
- ┗ 📜main.jsx
+┣ 📂api (axios 래퍼/각 도메인 fetch)
+┣ 📂assets
+┣ 📂components (공용 UI 컴포넌트)
+┣ 📂contexts
+┣ 📂data (정적 데이터: 자격증/파트너)
+┣ 📂lib (네이버맵 loader 등)
+┣ 📂pages (Home, Lectures, Community, Inquiry, Login ...)
+┣ 📂routes (권한 경로)
+┣ 📂sections (홈/CTA 섹션)
+┣ 📜App.jsx / main.jsx / index.css ...
 ```
 # Back
 ```
 📦apps
- ┣ 📂about
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┗ 📜views.py
- ┣ 📂accounts
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜permissions.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┣ 📜views.py
- ┣ 📂certificates
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┗ 📜views.py
- ┣ 📂gallery
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┗ 📜views.py
- ┣ 📂inquiries
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┣ 📜views.py
- ┣ 📂lectures
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┣ 📜views.py
- ┃ ┣ 📜views_combined.py
- ┃ ┗ 📜views_hrd.py
- ┣ 📂news
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┗ 📜views.py
- ┣ 📂popup
- ┃ ┣ 📜admin.py
- ┃ ┣ 📜apps.py
- ┃ ┣ 📜models.py
- ┃ ┣ 📜serializers.py
- ┃ ┣ 📜tests.py
- ┃ ┣ 📜urls.py
- ┃ ┗  📜views.py
- ┗ 📜__init__.py
-
-
+┣ about / accounts / certificates / gallery / inquiries / lectures / news / popup
 📦config
- ┣ 📂__pycache__
- ┃ ┣ 📜settings.cpython-312.pyc
- ┃ ┣ 📜urls.cpython-312.pyc
- ┃ ┣ 📜wsgi.cpython-312.pyc
- ┃ ┗ 📜__init__.cpython-312.pyc
- ┣ 📜asgi.py
- ┣ 📜settings.py
- ┣ 📜urls.py
- ┗ 📜wsgi.py
+┣ settings.py / urls.py / wsgi.py
 ```
 
 ## 👤 역할(개인 프로젝트)
-
-- **기획 · 디자인 · 프론트엔드 · 백엔드 · 배포 · 모니터링** 전 과정 **단독 수행**
-- 주요 공수
-  - 정보구조(IA) & 화면흐름 설계, OG/Kakao 미리보기, 접근성 고려
-  - 강의/공지/갤러리/팝업 도메인 모델링 & Admin 구성
-  - 수강문의 API/이메일 연동(실패 로깅·재발송 플로우)
-  - CORS/CSRF/보안 헤더 설정, 스토리지/정적파일 파이프라인
+- **기획·디자인·프론트·백엔드·배포·모니터링** 전 과정 단독 수행
+- 도메인 모델링, Admin 구성, 문의 메일 연동, 배포 자동화, CORS/보안 헤더 설정
 
 ---
 
 ## 🗓 개발 기간
-
-- **전체**: 2025-07 ~ 2025-09  
+- **2025-07 ~ 2025-09**
 
 ---
 
 ## ✨ 신경 쓴 부분
-
-- **문의 전송 안정성**: DB 저장 후 메일 발송 실패 시 로깅, 재발송 관리 훅
-- **성능**: 이미지 최적화(WebP/치수 명시), 캐시 헤더, Vercel 에지 캐시
-- **운영 UX**: 팝업 배너(오늘 하루 보지 않기), 반응형 레이아웃, HRD-Net 공공데이터 연결
-- **보안**: 비밀키/토큰 환경변수 운영, 도메인 기반 CORS/CSRF 화이트리스트
+- **문의 전송 신뢰성**: DB 저장 → 메일 발송 실패 시 **명시적 예외 로깅** + 재발송 트리거 분리.
+- **데이터 신선도 & 성능**: React Query 캐시/리트라이, 이미지 **Lazy Loading** + 명시적 width/height로 CLS 억제.
+- **운영 편의**: 팝업 배너(하루 보지 않기), 관리자 전용 에디터(공지/갤러리), 브레드크럼/반응형.
+- **안전한 통신**: CORS 화이트리스트, CSRF Trusted Origins, HTTPS 프록시 헤더 인지.
 
 ---
+
 
 ## 📱 페이지별 기능
 
@@ -306,7 +140,7 @@
 - ![home](./assets/메인화면.gif)
 
 ### 학원소개 (abouut)
-- 학원 인사말, 연혁, 비전, 협력업체, 오시는길 안내
+- 학원 인사말, 연혁, 비전, 시설소개, 협력업체, 오시는길 안내
 - ![Lectures](./assets/학원소개.gif)
 
 ### 강의 (Lectures)
@@ -331,65 +165,244 @@
 
 ---
 
-## 🧩 트러블 슈팅
+## 🧩 트러블 슈팅 (케이스 스터디)
+### 1) **201 Created인데 메일이 안 옴 (Naver SMTP)**
+- **증상**: `POST /api/inquiries/` 201 응답, DB에는 저장되나 **메일 미수신**.  
+- **가설**: `DEFAULT_FROM_EMAIL` 포맷/인코딩 또는 TLS/포트/타임아웃/DMARC 문제.  
+- **검증**  
+  1) `fail_silently=False` 로 전환 → SMTPException 메시지 확인  
+  2) 관리쉘에서 `send_mail()` 직접 호출로 **애플리케이션 레이어** 배제  
+  3) 발신자/로그인 계정 일치 여부 점검(Naver는 From과 계정 불일치 시 차단 빈발)  
+  4) `EMAIL_USE_TLS=True` 공백/따옴표 유무, 포트 587 확인  
+- **해결**  
+  - `DEFAULT_FROM_EMAIL=다모아요리학원 <id@naver.com>` (큰따옴표 제거)  
+  - From=로그인 계정 고정, Reply-To 로 사용자 이메일 분리  
+  - 예외/소요시간을 **구조적 로깅**(status, latency, smtp_code)  
+- **결과**: 미수신 재현 종료, 평균 메일 발송 시간(백엔드 관측) 안정화.
 
-### 1) SMTP 메일 미수신 이슈
-- **현상**: 201(Created) 응답이나 메일 미수신
-- **원인**: `EMAIL_USE_TLS` 공백/따옴표 문제, DMARC/From 미스매치
-- **해결**: `fail_silently=False` 로깅, 발신 도메인/포트/TLS 점검, From/Reply-To 분리
+### 2) **Vercel 프리뷰에서 CORS 에러 (OPTIONS 403)**
+- **증상**: 프리뷰 도메인에서만 CORS 프리플라이트 실패.  
+- **가설**: 허용 오리진 누락/정규식 불일치, `OPTIONS` 메서드 처리 미흡.  
+- **해결**  
+  - `CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.vercel\.app$"]` 추가  
+  - `ALLOW: POST, OPTIONS` 헤더 확인, CORS 미들웨어 순서 점검  
+- **결과**: 프리뷰/프로덕션 모두 성공. 배포 전 **프리뷰 검증 루프** 정착.
 
-### 2) CORS/CSRF 프리뷰 도메인
-- **현상**: Vercel 프리뷰에서 CORS/CSRF 차단
-- **해결**: `CORS_ALLOWED_ORIGIN_REGEXES`에 `^https://.*\.vercel\.app$` 추가, CSRF Trusted Origins 반영
+### 3) **정적 자원 캐시 불일치 (배너 이미지 교체 후 반영 지연)**
+- **증상**: 배너 이미지를 교체했지만 일부 사용자에게 구버전 노출.  
+- **해결**  
+  - 백엔드: `CompressedManifestStaticFilesStorage`로 **해시 기반 파일명** 서빙  
+  - 프론트: 빌드 산출물 파일명 해시 + Vercel 캐시 무효화  
+- **결과**: 배포 직후 일관된 최신 파일 제공.
+
+### 4) **HRD-Net 간헐 타임아웃**
+- **해결**: 읽기 전용 API는 **React Query** 캐싱 + 백엔드에서 **타임아웃/리트라이** + 사용자에게 **스켈레톤/에러 경계** 제공.
 
 ---
 
 ## 🚀 개선 목표 & 성능 최적화
-
-### Lighthouse
-- Best Practices/SEO 90~100 유지
-- CLS/LCP 개선을 위한 이미지 치수/지연로딩/캐시 정책 강화
-
-### 이미지/정적 자원
-- WebP/AVIF 변환(가능 시), 썸네일 제작
-- WhiteNoise 해시 서빙 + CDN 캐시
-
-### 데이터/운영
-- 관리자 전용 프론트(운영 대시보드)
-- HRD-Net 데이터 동기화 자동화 & 백업
+- **Lighthouse**: Best Practices/SEO 90~100 유지, CLS/LCP 개선(이미지 치수, lazy, 캐시 정책)  
+- **이미지/정적 자원**: WebP/AVIF(가능 시), 썸네일 파이프라인, 에지 캐시  
+- **운영**: 관리자 대시보드(집계/전환), HRD-Net 동기화 자동화
 
 ---
 
-## 🧪 설치 & 실행(요약)
+## 🧪 설치 & 실행 (간단)
 
-> 실제 비밀값은 인프라 환경변수로 주입합니다(README에 값 공개 없음).
+### 사전 요구사항
+- Node.js **>= 20**
+- Python **>= 3.12**
+- PostgreSQL **>= 14**
 
-### Frontend (로컬)
+---
+
+### 1) 프론트엔드
 ```bash
 cd frontend
 npm i
-npm run dev  # http://localhost:5173
-Backend (로컬)
-bash
 
+# 로컬 API 사용 시 .env.local 생성
+#   frontend/.env.local
+#   VITE_API_BASE="http://localhost:8000/api"
 
-cd backend
-# Poetry 또는 pip 중 택1
-poetry install && poetry run python manage.py migrate && poetry run python manage.py runserver 0.0.0.0:8000
-# 또는
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python manage.py migrate && python manage.py runserver 0.0.0.0:8000
+npm run dev   # http://localhost:5173
+# 프로덕션 빌드: npm run build
 ```
+
+### 2) 백엔드 (PostgreSQL)
+```bash
+cd backend
+
+# 가상환경 & 의존성
+python -m venv .venv
+# macOS/Linux
+source .venv/bin/activate
+# Windows PowerShell
+# .\.venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
+
+# ── 환경변수 설정 ──
+# macOS/Linux
+export DATABASE_URL="postgresql://USER:PASS@HOST:5432/DBNAME"
+# 개발 중 실제 메일 발송이 부담되면 콘솔 메일 백엔드 사용
+export EMAIL_BACKEND="django.core.mail.backends.console.EmailBackend"
+
+# Windows PowerShell
+# $env:DATABASE_URL="postgresql://USER:PASS@HOST:5432/DBNAME"
+# $env:EMAIL_BACKEND="django.core.mail.backends.console.EmailBackend"
+
+# DB 마이그레이션 & 서버 실행
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+# 로컬 API: http://localhost:8000/api
+# Swagger:   http://localhost:8000/api/docs/
+```
+
 ## 🔎 API 요약
-GET /api/lectures/ — 내부 강의 목록
+> 공개 API는 인증 없이 접근, **관리자용 엔드포인트는 JWT 필요**  
+> 문서 보기: https://damoacook.com/api/docs/ (운영 공개일 때) / 로컬: http://localhost:8000/api/docs/
 
-GET /api/lectures/{id}/ — 내부 강의 상세
+---
 
-GET /api/hrd-lectures/ — HRD-Net 연동 강의 목록
+### 1) 수강문의 (무로그인)
+`POST /api/inquiries/`  
+요청(모델 기준):
+```json
+{
+  "name": "홍길동",        // 최대 100자
+  "phone": "010-1234-5678", // 최대 20자
+  "message": "한식 기능사 과정 문의합니다."
+}
 
-GET /api/hrd-lectures/{id}/ — HRD-Net 연동 강의 상세
+성공(201):
 
-POST /api/inquiries/ — 수강문의 접수(메일 알림)
+{
+  "id": 5301,
+  "name": "홍길동",
+  "phone": "010-1234-5678",
+  "message": "한식 기능사 과정 문의합니다.",
+  "created_at": "2025-09-01T10:11:12+09:00"
+}
 
-GET /api/news/, GET /api/gallery/ — 콘텐츠 목록/상세
+
+유효성 오류(예):
+
+{
+  "phone": ["이 필드는 최대 20자 이하이어야 합니다."]
+}
+```
+
+2) 강의 (내부 DB)
+
+GET /api/lectures/?page=1&page_size=12
+응답(요약):
+```json
+{
+  "count": 42,
+  "next": "https://damoacook.com/api/lectures/?page=2&page_size=12",
+  "previous": null,
+  "results": [
+    {
+      "id": 101,
+      "type": "academy",           // "academy" | "hrd"
+      "title": "한식 기능사 실기",
+      "description": "과정 설명...",
+      "image": "https://.../media/lectures/xxx.jpg",  // ImageField URL
+      "tags": "한식,실기",
+      "day_of_week": "월/수/금",
+      "time": "14:00~16:00",
+      "start_date": "2025-09-15",
+      "end_date": "2025-10-30",
+      "capacity": 20,
+      "applied": 7,
+      "created_at": "2025-08-20T12:00:00+09:00"
+    }
+  ]
+}
+```
+
+GET /api/lectures/{id}/
+응답(예):
+```json
+{
+  "id": 101,
+  "type": "academy",
+  "title": "한식 기능사 실기",
+  "description": "과정 설명...",
+  "image": "https://.../media/lectures/xxx.jpg",
+  "tags": "한식,실기",
+  "day_of_week": "월/수/금",
+  "time": "14:00~16:00",
+  "start_date": "2025-09-15",
+  "end_date": "2025-10-30",
+  "capacity": 20,
+  "applied": 7,
+  "created_at": "2025-08-20T12:00:00+09:00"
+}
+```
+
+
+3) HRD-Net 강의(연동)
+
+GET /api/hrd-lectures/?q=한식&region=서울&page=1
+
+HRD-Net 외부 데이터 연동 결과를 페이지네이션하여 제공
+
+응답 필드는 연동 스키마에 맞춰 다를 수 있습니다(예: 과정명, 기관명, 지역, 접수/개강일, 상세링크 등).
+```json
+{
+  "count": 120,
+  "next": "...",
+  "previous": null,
+  "results": [
+    {
+      "id": "HRD-24-0001",
+      "title": "한식 조리기능사 취득과정",
+      "provider": "○○직업학교",
+      "region": "서울",
+      "start_date": "2025-09-10",
+      "link": "https://www.hrd.go.kr/..."
+    }
+  ]
+}
+```
+4) 공지/갤러리
+
+GET /api/news/ / GET /api/news/{id}/
+
+GET /api/gallery/ / GET /api/gallery/{id}/
+
+목록 응답(요약):
+```json
+{
+  "count": 10,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 301,
+      "title": "9월 모집 안내",
+      "thumbnail": "https://.../thumb.jpg",
+      "created_at": "2025-08-31T20:00:00+09:00"
+    }
+  ]
+}
+```
+
+상세 응답(예):
+```json
+{
+  "id": 301,
+  "title": "9월 모집 안내",
+  "content": "<p>상세 공지 본문...</p>",
+  "images": ["https://.../1.jpg", "https://.../2.jpg"],
+  "created_at": "2025-08-31T20:00:00+09:00"
+}
+```
+🔐 인증(관리자용)
+
+JWT Bearer 토큰 사용 (SimpleJWT)
+
+Swagger UI 우상단 Authorize → Bearer <JWT> 입력 후 보호 엔드포인트 시도 가능
+
