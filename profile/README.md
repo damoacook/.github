@@ -26,7 +26,6 @@
 
 ## 🔗 배포 & 접근
 - **웹사이트**: https://damoacook.com  
-- **API Base**: https://damoacook.com/api/  
 - **관리자/테스트 계정**: 내부 운영용으로 비공개 (일반 사용자는 로그인 불필요)
 - **백엔드레포**: https://github.com/damoacook/damoacook-back/tree/main
 
