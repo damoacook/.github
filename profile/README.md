@@ -169,7 +169,7 @@
 - ![map](./assets/학원위치안내.gif)
 
 ### 팝업배너 (Popup)
-- **Naver Maps JS v3**로 위치 안내
+- **팝업배너**로 이벤트 및 소식 안내
 - ![Popup](./assets/팝업배너.gif)
 
 ---
