@@ -302,7 +302,7 @@ python manage.py runserver 0.0.0.0:8000
 
 ## 🔎 API 요약
 > 공개 API는 인증 없이 접근, **관리자용 엔드포인트는 JWT 필요**  
-> 문서 보기: https://damoacook.com/api/docs/ (운영 공개일 때) / 로컬: http://localhost:8000/api/docs/
+> 로컬: http://localhost:8000/api/docs/
 
 ---
 
